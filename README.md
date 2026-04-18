@@ -43,8 +43,8 @@ This project is a single-page school website designed to:
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/aputuogya-school-site.git
-cd aputuogya-school-site
+git clone https://Simms-creator.github.io/ajs/
+cd ajs
 
 ---
 
