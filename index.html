@@ -5,183 +5,194 @@
 }</script></head><body>
 
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aputuogya D/A JHS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aputuogya D/A JHS</title>
 
-<style>
-body {
-  margin:0;
-  font-family:"Times New Roman",Georgia,serif;
-  color:white;
-  min-height:100vh;
-  position:relative;
-}
+  <link rel="stylesheet" href="./style.css">
 
-/* BLURRED BACKGROUND (2ND IMAGE) */
-body::before {
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  <style>
+    body {
+      margin:0;
+      font-family:"Times New Roman", Georgia, serif;
+      color:white;
+      min-height:100vh;
+      position:relative;
+    }
 
-  background:url("https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg")
-  no-repeat center center / cover;
+    /* BACKGROUND */
+    body::before {
+      content:"";
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:url("https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg")
+      no-repeat center center / cover;
+      filter:blur(9px);
+      transform:scale(1.1);
+      z-index:-2;
+    }
 
-  filter:blur(9px);
-  transform:scale(1.1);
-  z-index:-2;
-}
+    body::after {
+      content:"";
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.55);
+      z-index:-1;
+    }
 
-/* DARK OVERLAY */
-body::after {
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.55);
-  z-index:-1;
-}
+    nav {
+      display:flex;
+      justify-content:center;
+      padding:15px;
+      background:rgba(0,0,0,0.6);
+      position:sticky;
+      top:0;
+    }
 
-nav {
-  display:flex;
-  justify-content:center;
-  padding:15px;
-  background:rgba(0,0,0,0.6);
-  position:sticky;
-  top:0;
-}
+    nav a {
+      color:white;
+      margin:10px;
+      text-decoration:none;
+    }
 
-nav a {
-  color:white;
-  margin:10px;
-  text-decoration:none;
-}
+    .hero {
+      text-align:center;
+      padding:60px 20px;
+    }
 
-.hero {
-  text-align:center;
-  padding:60px 20px;
-}
+    section {
+      padding:40px 20px;
+      max-width:900px;
+      margin:auto;
+    }
 
-section {
-  padding:40px 20px;
-  max-width:900px;
-  margin:auto;
-}
+    .card {
+      background:rgba(0,0,0,0.6);
+      padding:20px;
+      border-radius:10px;
+    }
 
-.card {
-  background:rgba(0,0,0,0.6);
-  padding:20px;
-  border-radius:10px;
-}
+    /* GALLERY */
+    .gallery {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:10px;
+    }
 
-/* GALLERY */
-.gallery {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap:10px;
-}
+    .gallery img,
+    .gallery video {
+      width:100%;
+      border-radius:8px;
+      object-fit:cover;
+      cursor:pointer;
+      transition:0.3s;
+    }
 
-.gallery img {
-  width:100%;
-  border-radius:8px;
-  cursor:pointer;
-  transition:0.3s;
-}
+    .gallery img:hover,
+    .gallery video:hover {
+      transform:scale(1.03);
+    }
 
-.gallery img:hover {
-  transform:scale(1.03);
-}
+    /* FORM */
+    input, textarea {
+      width:100%;
+      padding:10px;
+      margin:5px 0;
+      border:none;
+      border-radius:5px;
+    }
 
-/* FORM */
-input, textarea {
-  width:100%;
-  padding:10px;
-  margin:5px 0;
-  border:none;
-  border-radius:5px;
-}
+    button {
+      background:#ffcc00;
+      padding:10px;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+    }
 
-button {
-  background:#ffcc00;
-  padding:10px;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-#status {
-  margin-top:10px;
-  font-weight:bold;
-}
-</style>
+    #status {
+      margin-top:10px;
+      font-weight:bold;
+    }
+  </style>
 
 
 
 
 <!-- NAV -->
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero" id="home">
-<h1>Aputuogya D/A JHS</h1>
-<p>Building Future Innovators</p>
+  <h1>Aputuogya D/A JHS</h1>
+  <p>Building Future Innovators</p>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-<div class="card">
-<h2>About School</h2>
-<p>We focus on STEM education, discipline, and academic excellence.</p>
-</div>
+  <div class="card">
+    <h2>About School</h2>
+    <p>We focus on STEM education, discipline, and academic excellence.</p>
+  </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY (REPLACED FULL VERSION) -->
 <section id="gallery">
-<div class="card">
-<h2>Gallery</h2>
+  <div class="card">
+    <h2>Gallery</h2>
 
-<div class="gallery">
+    <div class="gallery">
 
-<img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_202213_Google.jpg">
+      <!-- VIDEOS -->
+      <video controls="">
+        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/60cd3e8c7cef43de91e819c3508b87e7.mp4" type="video/mp4">
+      </video>
 
-<img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg">
+      <video controls="">
+        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/c16b08750572cac1ccda15fe222ea333.mp4" type="video/mp4">
+      </video>
 
-<img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225542_Google.jpg">
+      <video controls="">
+        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/ebb5621f1647dfd4efac7324cd6a0dca.mp4" type="video/mp4">
+      </video>
 
-<img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225107_Google.jpg">
+      <video controls="">
+        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/f862df780bbaab2a24ade84a1608b762.mp4" type="video/mp4">
+      </video>
 
-<img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225214_Google.jpg">
+      <!-- IMAGES -->
+      <img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_202213_Google.jpg" loading="lazy">
+      <img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg" loading="lazy">
+      <img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225542_Google.jpg" loading="lazy">
+      <img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225107_Google.jpg" loading="lazy">
 
-<img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225146_Google.jpg">
-
-</div>
-
-</div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<div class="card">
-<h2>Contact</h2>
+  <div class="card">
+    <h2>Contact</h2>
 
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<textarea id="message" placeholder="Message"></textarea>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
 
-<button onclick="sendMessage()">Send</button>
-<p id="status"></p>
-
-</div>
+    <button onclick="sendMessage()">Send</button>
+    <p id="status"></p>
+  </div>
 </section>
 
 <!-- SUPABASE -->
