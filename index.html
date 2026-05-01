@@ -5,230 +5,372 @@
 }</script></head><body>
 
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aputuogya D/A JHS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aputuogya D/A JHS</title>
 
-  <link rel="stylesheet" href="./style.css">
+<!-- GEN Z MODERN FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin:0;
-      font-family:"Times New Roman", Georgia, serif;
-      color:white;
-      min-height:100vh;
-      position:relative;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Space Grotesk","Poppins",sans-serif;
+}
 
-    /* BACKGROUND */
-    body::before {
-      content:"";
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:url("https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg")
-      no-repeat center center / cover;
-      filter:blur(9px);
-      transform:scale(1.1);
-      z-index:-2;
-    }
+html{scroll-behavior:smooth;}
 
-    body::after {
-      content:"";
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.55);
-      z-index:-1;
-    }
+body{
+  color:#f1f5f9;
+}
 
-    nav {
-      display:flex;
-      justify-content:center;
-      padding:15px;
-      background:rgba(0,0,0,0.6);
-      position:sticky;
-      top:0;
-    }
+/* 🌫️ BLURRED BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url("https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225146_Google.jpg") no-repeat center center / cover;
+  filter:blur(12px);
+  transform:scale(1.1);
+  z-index:-2;
+}
 
-    nav a {
-      color:white;
-      margin:10px;
-      text-decoration:none;
-    }
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(10,15,30,0.75);
+  z-index:-1;
+}
 
-    .hero {
-      text-align:center;
-      padding:60px 20px;
-    }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-    section {
-      padding:40px 20px;
-      max-width:900px;
-      margin:auto;
-    }
+nav h2{color:#38bdf8;}
 
-    .card {
-      background:rgba(0,0,0,0.6);
-      padding:20px;
-      border-radius:10px;
-    }
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
 
-    /* GALLERY */
-    .gallery {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap:10px;
-    }
+nav a:hover{color:#38bdf8;}
 
-    .gallery img,
-    .gallery video {
-      width:100%;
-      border-radius:8px;
-      object-fit:cover;
-      cursor:pointer;
-      transition:0.3s;
-    }
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 
-    .gallery img:hover,
-    .gallery video:hover {
-      transform:scale(1.03);
-    }
+.hero-box{
+  background:rgba(0,0,0,0.45);
+  padding:40px;
+  border-radius:18px;
+  backdrop-filter:blur(10px);
+}
 
-    /* FORM */
-    input, textarea {
-      width:100%;
-      padding:10px;
-      margin:5px 0;
-      border:none;
-      border-radius:5px;
-    }
+.hero h1{font-size:3rem;}
+.hero p{color:#cbd5f5;}
+.badge{color:#38bdf8;margin-top:10px;font-weight:600;}
 
-    button {
-      background:#ffcc00;
-      padding:10px;
-      border:none;
-      border-radius:5px;
-      cursor:pointer;
-    }
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    #status {
-      margin-top:10px;
-      font-weight:bold;
-    }
-  </style>
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(30,41,59,0.85);
+  padding:20px;
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+}
+
+/* STATS */
+.stat{text-align:center;}
+.stat h1{color:#38bdf8;font-size:2.5rem;}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery img,
+.gallery video{
+  width:100%;
+  border-radius:12px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+
+/* CONTACT */
+.contact-box{
+  max-width:700px;
+  margin:auto;
+  background:rgba(30,41,59,0.9);
+  padding:30px;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border:none;
+  border-radius:10px;
+  background:rgba(15,23,42,0.6);
+  color:white;
+  outline:none;
+}
+
+button{
+  width:100%;
+  margin-top:15px;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  font-weight:700;
+  cursor:pointer;
+}
+
+button:hover{transform:scale(1.03);}
+
+#status{margin-top:10px;color:#38bdf8;text-align:center;}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.6);
+}
+</style>
 
 
 
 
 <!-- NAV -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
+  <h2>Aputuogya JHS</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
-  <h1>Aputuogya D/A JHS</h1>
-  <p>Building Future Innovators</p>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="card">
-    <h2>About School</h2>
-    <p>We focus on STEM education, discipline, and academic excellence.</p>
+<section class="hero" id="home">
+  <div class="hero-box">
+    <h1>Aputuogya D/A JHS</h1>
+    <p>Excellence • Discipline • Knowledge</p>
+    <p class="badge">10+ Years of Academic Excellence</p>
   </div>
 </section>
 
-<!-- GALLERY (REPLACED FULL VERSION) -->
-<section id="gallery">
-  <div class="card">
-    <h2>Gallery</h2>
+<!-- ABOUT (COMPLETE SCHOOL PROFILE) -->
+<section id="about">
+  <h2>About Our School</h2>
 
-    <div class="gallery">
+  <div class="grid">
 
-      <!-- VIDEOS -->
-      <video controls="">
-        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/60cd3e8c7cef43de91e819c3508b87e7.mp4" type="video/mp4">
-      </video>
-
-      <video controls="">
-        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/c16b08750572cac1ccda15fe222ea333.mp4" type="video/mp4">
-      </video>
-
-      <video controls="">
-        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/ebb5621f1647dfd4efac7324cd6a0dca.mp4" type="video/mp4">
-      </video>
-
-      <video controls="">
-        <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/f862df780bbaab2a24ade84a1608b762.mp4" type="video/mp4">
-      </video>
-
-      <!-- IMAGES -->
-      <img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_202213_Google.jpg" loading="lazy">
-      <img src="https://suooxhbofabprobsbscm.supabase.co/storage/v1/object/public/upload/Screenshot_20260412_165342_Google.jpg" loading="lazy">
-      <img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225542_Google.jpg" loading="lazy">
-      <img src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/Screenshot_20260417_225107_Google.jpg" loading="lazy">
-
+    <div class="card">
+      <h3> Overview</h3>
+      <p>
+        Aputuogya D/A Junior High School is a respected basic education institution
+        dedicated to shaping young minds through quality education, discipline, and
+        moral upbringing. The school has served the community for over 10+ years.
+      </p>
     </div>
+
+    <div class="card">
+      <h3> History</h3>
+      <p>
+        Established to improve access to education in the community, the school has
+        grown steadily and produced many successful students who continue their
+        education in senior high schools across Ghana.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Mission</h3>
+      <p>
+        To provide a safe and supportive learning environment that builds knowledge,
+        discipline, creativity, and responsibility in students.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Vision</h3>
+      <p>
+        To become a leading junior high school known for academic excellence,
+        innovation, and producing future leaders.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Core Values</h3>
+      <ul>
+        <li>Discipline</li>
+        <li>Respect</li>
+        <li>Integrity</li>
+        <li>Hard Work</li>
+        <li>Excellence</li>
+        <li>Leadership</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3> Academics</h3>
+      <p>
+        Subjects include Mathematics, English, Science, ICT, Social Studies,
+        RME, and Creative Arts, following the Ghana Education Service curriculum.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Teaching</h3>
+      <p>
+        We use student-centered learning, combining modern ICT tools and traditional
+        methods to improve understanding and engagement.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Facilities</h3>
+      <p>
+        The school provides classrooms, learning resources, ICT access, and space
+        for sports and extracurricular activities.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Student Life</h3>
+      <p>
+        Students participate in sports, cultural events, clubs, and leadership
+        activities that build confidence and teamwork.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Staff</h3>
+      <p>
+        Dedicated teachers and leadership staff ensure discipline, academic excellence,
+        and student success.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Community</h3>
+      <p>
+        The school plays a major role in community development by educating future
+        leaders and responsible citizens.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3> Achievement</h3>
+      <p>
+        Strong BECE performance with many students gaining admission into top senior
+        high schools.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <h2>Our Impact</h2>
+  <div class="grid">
+    <div class="card stat"><h1>10+</h1><p>Years</p></div>
+    <div class="card stat"><h1>1000+</h1><p>Students</p></div>
+    <div class="card stat"><h1>95%</h1><p>Success</p></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+
+    <video controls="">
+      <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/f862df780bbaab2a24ade84a1608b762.mp4">
+    </video>
+
+    <video controls="">
+      <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/ebb5621f1647dfd4efac7324cd6a0dca.mp4">
+    </video>
+
+    <video controls="">
+      <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/c16b08750572cac1ccda15fe222ea333.mp4">
+    </video>
+
+    <video controls="">
+      <source src="https://pcfgbsoetouzasxpovqo.supabase.co/storage/v1/object/public/uploads/60cd3e8c7cef43de91e819c3508b87e7.mp4">
+    </video>
+
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="card">
-    <h2>Contact</h2>
+  <h2>Contact Us</h2>
 
-    <input id="name" placeholder="Name">
-    <input id="email" placeholder="Email">
-    <textarea id="message" placeholder="Message"></textarea>
-
-    <button onclick="sendMessage()">Send</button>
-    <p id="status"></p>
+  <div class="contact-box">
+    <form onsubmit="sendMessage(event)">
+      <input id="name" placeholder="Your Name" required="">
+      <input id="email" type="email" placeholder="Your Email" required="">
+      <textarea id="message" placeholder="Your Message" required=""></textarea>
+      <button>Send Message</button>
+      <p id="status"></p>
+    </form>
   </div>
 </section>
 
-<!-- SUPABASE -->
-<script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-
-const supabase = createClient(
-  "https://pcfgbsoetouzasxpovqo.supabase.co",
-  "sb_publishable_XC27I6E9iq7OcDsMXP5EGQ_5tvCsy4O"
-);
-
-window.sendMessage = async function () {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const status = document.getElementById("status");
-
-  if (!name || !email || !message) {
-    status.textContent = "Fill all fields";
-    return;
-  }
-
-  const { error } = await supabase
-    .from("messages")
-    .insert([{ name, email, message }]);
-
-  if (error) {
-    status.textContent = error.message;
-  } else {
-    status.textContent = "Message sent successfully";
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  }
-};
-</script>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Aputuogya D/A JHS</p>
+</footer>
 
 
 <script src="./script.js"></script></body></html>
